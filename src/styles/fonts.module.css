@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'SB Sans Interface';
+  src: url('../../public/fonts/SBSansUI-Regular.woff'),
+    url('../../public/fonts/SBSansUI-Regular.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SB Sans Text';
+  src: url('../../public/fonts/SBSansText-Medium.woff'),
+    url('../../public/fonts/SBSansText-Medium.woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SB Sans Text';
+  src: url('../../public/fonts/SBSansText-Semibold.woff'),
+    url('../../public/fonts/SBSansText-Semibold.woff2');
+  font-weight: 600;
+}
