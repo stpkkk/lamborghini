@@ -1,5 +1,4 @@
 import React from 'react';
+import { PageWrapper } from '../components/layout/PageWrapper';
 
-const MainPage = () => <div>MainPadqwdqwdqwdgedqd</div>;
-
-export default MainPage;
+export const MainPage = () => <PageWrapper>MainPage</PageWrapper>;

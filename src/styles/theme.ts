@@ -1,7 +1,7 @@
-const theme = {
+export const theme = {
   colors: {
     text: {
-      black: '#1F1F22',
+      darkGray: '#363636',
     },
     background: {
       page: '#F2F4F7',
