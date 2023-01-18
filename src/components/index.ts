@@ -1,2 +1,3 @@
-export { App } from './App';
+export * from './header';
 export * from './layout';
+export * from './promo';
