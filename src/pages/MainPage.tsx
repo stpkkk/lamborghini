@@ -1,9 +1,11 @@
 import React from 'react';
-import { PageContainer, } from '../components/layout/PageContainer';
-import { Header } from '../components/Header';
+import { Promo, Header } from '../components';
 
-export const MainPage = () => (
-  <PageContainer>
+export const MainPage: React.FC = () => (
+  <>
     <Header />
-  </PageContainer>
+    <main>
+      <Promo />
+    </main>
+  </>
 );
