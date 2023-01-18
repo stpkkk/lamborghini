@@ -1,4 +1,9 @@
 import React from 'react';
-import { PageWrapper } from '../components/layout/PageWrapper';
+import { PageContainer, } from '../components/layout/PageContainer';
+import { Header } from '../components/Header';
 
-export const MainPage = () => <PageWrapper>MainPage</PageWrapper>;
+export const MainPage = () => (
+  <PageContainer>
+    <Header />
+  </PageContainer>
+);
