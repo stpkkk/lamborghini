@@ -6,6 +6,7 @@ import { theme } from '../../styles';
 import { Arrow } from '../../assets/icons';
 import { Title } from './Title';
 import { Subtitle } from './Subtitle';
+import { Container } from '../layout/Container';
 
 const PromoSection = styled.section`
   background: url(${promoImage}) no-repeat center;
@@ -26,12 +27,14 @@ const { darkGray } = theme.colors.text;
 
 export const Promo: React.FC = () => (
   <PromoSection>
-    <Title />
-    <Subtitle />
-    <Line mw={386} mb={10} />
-    <Typography fz={16} color={darkGray}>
-      автодром Портимао, Португалия
-    </Typography>
+    <Container mw={1220}>
+      <Title />
+      <Subtitle />
+      <Line mw={386} mb={10} />
+      <Typography fz={16} color={darkGray}>
+        автодром Портимао, Португалия
+      </Typography>
+    </Container>
     <a href="/">
       <Arrow />
     </a>
