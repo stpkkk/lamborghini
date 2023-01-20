@@ -6,7 +6,7 @@ import { theme } from '../../styles';
 import { Arrow } from '../../assets/icons';
 import { Title } from './Title';
 import { Subtitle } from './Subtitle';
-import { Container } from '../layout/Container';
+import { Container } from '../layout';
 
 const PromoSection = styled.section`
   background: url(${promoImage}) no-repeat center;

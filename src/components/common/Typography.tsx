@@ -12,6 +12,7 @@ type Props = {
   ls?: string;
   color?: string;
   mw?: number;
+  fb?: string;
 };
 
 const StyledComponent = styled.div<Props>`
@@ -58,10 +59,15 @@ const StyledComponent = styled.div<Props>`
     css`
       letter-spacing: ${ls};
     `};
-  ${({ mw }) =>
+	${({ mw }) =>
     mw &&
     css`
       max-width: ${mw}px;
+	  `};
+  ${({ fb }) =>
+    fb &&
+    css`
+      flex-basis: ${fb};
     `};
 `;
 
