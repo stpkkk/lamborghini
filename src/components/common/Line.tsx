@@ -12,7 +12,7 @@ const StyledComponent = styled.div<Props>`
   ${({ mw }) =>
     mw &&
     css`
-      min-width: ${mw}px;
+      max-width: ${mw}px;
     `};
   ${({ mb }) =>
     mb &&

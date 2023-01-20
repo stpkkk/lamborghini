@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
 
 export const Header: React.FC = () => (
   <StyledHeader>
-    <Container>
+    <Container mw={1220}>
       <Navigation />
     </Container>
   </StyledHeader>
