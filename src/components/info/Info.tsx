@@ -23,6 +23,7 @@ const InfoPart = styled.div`
   }
   img {
     object-fit: cover;
+    align-self: center;
   }
   :nth-child(1) {
     display: block;
