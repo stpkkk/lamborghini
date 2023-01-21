@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Typography } from '../common';
+import { StyledH3, Typography } from '../common';
 import { Container } from '../layout';
 import infoFirstImage from '../../assets/images/info-first.jpg';
 import infoSecondImage from '../../assets/images/info-second.png';
@@ -14,13 +14,6 @@ const InfoPart = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 100px 0 0 0;
-  h3 {
-    margin: 0 0 30px;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-  }
   img {
     object-fit: cover;
     align-self: center;
@@ -48,7 +41,7 @@ export const Info: React.FC = () => (
   <Container mw={920}>
     <InfoSection>
       <InfoPart>
-        <h3>СУПЕР ТРОФЕО МИРОВОЙ ФИНАЛ</h3>
+        <StyledH3 m="0 0 30px">СУПЕР ТРОФЕО МИРОВОЙ ФИНАЛ</StyledH3>
         <InfoTextBox>
           <Typography fb="440px">
             Мировой финал Lamborghini завершает каждый сезон Super Trofeo с 2013
@@ -69,7 +62,7 @@ export const Info: React.FC = () => (
       </InfoPart>
       <InfoPart>
         <InfoContent>
-          <h3>КОМАНДЫ СУПЕР ТРОФЕО</h3>
+          <StyledH3 m="0 0 30px">КОМАНДЫ СУПЕР ТРОФЕО</StyledH3>
           <Typography mw={352} m="0 0 30px">
             Все автомобили, которые участвуют в чемпионатах Lamborghini Super
             Trofeo, управляются частными командами, которые используют свой опыт
@@ -91,7 +84,9 @@ export const Info: React.FC = () => (
       </InfoPart>
       <InfoPart className="info-part-third">
         <InfoContent>
-          <h3>КАЛЕНДАРЬ СЕЗОНА SUPER TROFEO EUROPE 2023 ГОДА</h3>
+          <StyledH3 m="0 0 30px">
+            КАЛЕНДАРЬ СЕЗОНА SUPER TROFEO EUROPE 2023 ГОДА
+          </StyledH3>
           <Typography mw={377}>
             14 в истории серии GT, посвященный автомобилям Lamborghini Huracan
             Super Trofeo Evo. Шесть этапов, в общей сложности 12 гонок и 600

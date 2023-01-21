@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Typography } from '../common';
+import { StyledH3, Typography } from '../common';
 import { theme } from '../../styles';
 import { Container } from '../layout';
 import EvoCar from '../../assets/images/evo-car.png';
@@ -44,15 +44,6 @@ const EvoBlackInfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 0 200px;
-  h3 {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 38px;
-    text-transform: uppercase;
-    color: #ffffff;
-    padding: 0 50px 0;
-  }
 `;
 const EvoBlackTextBox = styled.div`
   display: flex;
@@ -85,7 +76,9 @@ export const EvoBlack: React.FC = () => {
     <EvoBlackWrapper>
       <Container mw={920}>
         <EvoBlackInfoWrapper>
-          <h3>СУПЕР ТРОФЕО ЭВО</h3>
+          <StyledH3 color="#FFFFFF" p="0 50px 0">
+            СУПЕР ТРОФЕО ЭВО
+          </StyledH3>
           <EvoBlackTextBox>
             <Typography color="#FFFFFF">
               Новый Huracán Super Trofeo EVO достигает еще больших высот, чем

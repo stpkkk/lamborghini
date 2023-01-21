@@ -1,19 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from './layout';
-import { Typography } from './common';
+import { StyledH3, Typography } from './common';
 import trackImage from '../assets/images/track-img.png';
 import trackBgImage from '../assets/images/track-bg.jpg';
 
 const TrackSection = styled.section`
   background: url(${trackBgImage}) no-repeat center;
   background-size: cover;
-  h3 {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-    padding: 50px 0 30px 0;
-  }
   img {
     display: block;
     margin: auto auto 90px auto;
@@ -29,7 +23,7 @@ export const Track: React.FC = () => (
   <TrackSection>
     <Container mw={1220}>
       <TrackWrapper>
-        <h3>ТРЕК ПОРТИМАО</h3>
+        <StyledH3 p="50px 0 30px 0">ТРЕК ПОРТИМАО</StyledH3>
         <Typography mw={435} fw={400}>
           Autodromo Internacional do Algarve находится в одноименном регионе на
           юге Португалии, недалеко от города Портиман. Открытый в октябре 2008
