@@ -1,5 +1,5 @@
 import React from 'react';
-import { Promo, Header, Info, Track } from '../components';
+import { Promo, Header, Info, Track, Evo } from '../components';
 
 export const MainPage: React.FC = () => (
   <>
@@ -8,6 +8,7 @@ export const MainPage: React.FC = () => (
       <Promo />
       <Info />
       <Track />
+      <Evo />
     </main>
   </>
 );
