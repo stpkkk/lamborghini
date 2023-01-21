@@ -7,7 +7,7 @@ export const theme = {
     },
     background: {
       page: '#F2F4F7',
-      green: '#38FCB5',
+      darkGray: '#363636',
     },
     line: {
       black: '#040404',
