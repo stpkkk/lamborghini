@@ -21,7 +21,7 @@ const TrackWrapper = styled.div`
 
 export const Track: React.FC = () => (
   <TrackSection>
-    <Container mw={1220}>
+    <Container mw={920}>
       <TrackWrapper>
         <StyledH3 p="50px 0 30px 0">ТРЕК ПОРТИМАО</StyledH3>
         <Typography mw={435} fw={400}>
