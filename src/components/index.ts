@@ -4,4 +4,4 @@ export * from './header';
 export * from './layout';
 export * from './promo';
 export * from './evo';
-
+export * from './blog';

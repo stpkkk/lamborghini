@@ -10,8 +10,10 @@ type Props = {
   fw?: number;
   lh?: string | number;
   ls?: string;
+  fs?: string;
   color?: string;
   mw?: number;
+  mh?: number;
   fb?: string;
 };
 
@@ -59,10 +61,20 @@ const StyledComponent = styled.div<Props>`
     css`
       letter-spacing: ${ls};
     `};
+  ${({ fs }) =>
+    fs &&
+    css`
+      font-style: ${fs};
+    `};
 	${({ mw }) =>
     mw &&
     css`
       max-width: ${mw}px;
+	  `};
+	${({ mh }) =>
+    mh &&
+    css`
+      min-height: ${mh}px;
 	  `};
   ${({ fb }) =>
     fb &&
