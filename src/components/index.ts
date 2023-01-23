@@ -5,3 +5,4 @@ export * from './layout';
 export * from './promo';
 export * from './evo';
 export * from './blog';
+export * from './footer';
