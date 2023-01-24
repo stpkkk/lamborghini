@@ -13,7 +13,6 @@ const BlogQuoteWrapper = styled.div`
   gap: 20px;
 `;
 const BlogQuoteTextBox = styled.div`
-  padding: 0 0 100px;
   flex-basis: 434px;
   blockquote {
     margin: 0 0 30px;
