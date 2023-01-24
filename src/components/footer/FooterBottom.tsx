@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FooterLogo } from '../../assets/icons';
+import { Logo } from '../../assets/icons';
 
 const StyledFooterBottom = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const StyledFooterBottom = styled.div`
 export const FooterBottom: React.FC = () => (
   <StyledFooterBottom>
     <a href="https://github.com/stpkkk">Developed by Igor Stepanov</a>
-    <FooterLogo />
+    <Logo width={50} height={58} />
     <a href="/">Политика конфиденциальности </a>
   </StyledFooterBottom>
 );

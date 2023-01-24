@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
         ))}
       </ul>
       <a href="/">
-        <Logo />
+        <Logo width={83} height={105} />
       </a>
       <ul>
         {rightNav.map((n) => (

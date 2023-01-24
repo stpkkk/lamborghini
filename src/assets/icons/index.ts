@@ -6,4 +6,3 @@ export { EvoVideoIcon } from './EvoVideoIcon';
 export { Facebook } from './Facebook';
 export { Insta } from './Insta';
 export { Youtube } from './Youtube';
-export { FooterLogo } from './FooterLogo';
