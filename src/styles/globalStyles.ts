@@ -10,7 +10,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  color: ${(props) => props.theme.colors.text.black};
 }
 body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -18,6 +17,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.2;
+  color: ${(props) => props.theme.colors.text.black};
   background: ${(props) => props.theme.colors.background.page};
 }
 a {
