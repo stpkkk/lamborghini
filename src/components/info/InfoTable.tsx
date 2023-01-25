@@ -15,7 +15,10 @@ const StyledTable = styled.table`
     top: -20px;
   }
   td {
-    padding: 0 0 20px;
+    padding: 0 5px 20px 5px;
+  }
+  ${theme.breakpoints.mobile} {
+    width: 100%;
   }
 `;
 
