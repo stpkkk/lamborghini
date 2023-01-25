@@ -1,11 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import { ReactNode } from 'react';
+import styled, { css } from 'styled-components';
 import { theme } from '../../styles';
 
-const StyledSubtitle = styled.h2`
+type Props = {
+  children: ReactNode;
+  fz: number;
+};
+
+const StyledComponent = styled.h2<Props>`
   font-weight: 400;
   font-family: 'Impact', sans-serif;
-  font-size: 48px;
   margin: 0 0 10px 0;
   span {
     display: block;
@@ -13,10 +17,11 @@ const StyledSubtitle = styled.h2`
     color: ${theme.colors.text.gold};
     padding: 10px 0;
   }
+  ${({ fz }) =>
+    fz &&
+    css`
+      font-size: ${fz}px;
+    `};
 `;
 
-export const Subtitle: React.FC = () => (
-  <StyledSubtitle>
-    Гранд-финал 2023 <span>3-6 ноября </span>
-  </StyledSubtitle>
-);
+export const Subtitle = (props: Props) => <StyledComponent {...props} />;
