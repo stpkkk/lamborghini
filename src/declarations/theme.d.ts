@@ -2,6 +2,9 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    breakpoints: {
+      mobile: string;
+    };
     colors: {
       text: {
         darkGray: string;

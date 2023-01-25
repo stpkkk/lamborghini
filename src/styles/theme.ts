@@ -1,4 +1,7 @@
 export const theme = {
+  breakpoints: {
+    mobile: '@media (max-width: 960px)',
+  },
   colors: {
     text: {
       darkGray: '#363636',
