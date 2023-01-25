@@ -1,15 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
+import { ReactNode } from 'react';
+import styled, { css } from 'styled-components';
 
-const StyledTitle = styled.h1`
+type Props = {
+  children: ReactNode;
+  fz?: number;
+};
+
+const StyledComponent = styled.h1<Props>`
   font-weight: 400;
   font-family: 'Impact', sans-serif;
-  font-size: 76px;
   list-style: 0.02em;
   margin: 0 0 10px 0px;
   text-transform: uppercase;
+  ${({ fz }) =>
+    fz &&
+    css`
+      font-size: ${fz}px;
+    `};
 `;
 
-export const Title: React.FC = () => (
-  <StyledTitle>LAMBORGHINI SUPER TROFEO</StyledTitle>
-);
+export const Title = (props: Props) => <StyledComponent {...props} />;

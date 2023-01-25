@@ -1,26 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Logo } from '../../assets/icons';
 import { theme } from '../../styles';
+import { useMobile } from '../hooks';
+import { BurgerButton } from './BurgerButton';
 
 const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
   ul {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 0 40px;
-    padding: 0 20px;
-    li a {
+    gap: 0 20px;
+    padding: 0 10px;
+    a li {
       font-size: 16px;
       color: ${theme.colors.text.darkGray};
+    }
+  }
+  ${theme.breakpoints.mobile} {
+    ul {
+      background: url('https://media0.giphy.com/media/CwM9k8RChLqqQ/giphy.gif?cid=ecf05e47s0uniyf7d35ufnwt4xfxq0oifqsv3bowq8bm8gun&rid=giphy.gif&ct=g')
+        75% bottom;
+      background-size: cover;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      background-color: ${theme.colors.background.darkGray};
+      padding: 120px 0 0 0;
+      z-index: -1;
+
+      a {
+        width: 100%;
+        li {
+          color: #ffffff;
+          padding: 10px;
+          font-size: 3vh;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+      a :hover {
+        color: ${theme.colors.text.darkGray};
+        background-color: #ffffff;
+      }
+      a :active {
+        color: ${theme.colors.text.darkGray};
+        background-color: #ffffff;
+      }
     }
   }
 `;
 
 export const Navigation: React.FC = () => {
+  const [isOpen, setOpen] = useState(false);
+  const isMobile = useMobile();
   const leftNav = [
     { navLink: '/', navTitle: 'О гонке' },
     { navLink: '/', navTitle: 'Трек' },
@@ -32,25 +73,46 @@ export const Navigation: React.FC = () => {
     { navLink: '/', navTitle: 'Смотреть онлайн' },
     { navLink: '/', navTitle: 'Контакты' },
   ];
+  const mergedNav = [...leftNav, ...rightNav];
+
   return (
-    <StyledNav>
-      <ul>
-        {leftNav.map((n) => (
-          <li key={crypto.randomUUID()}>
-            <a href={n.navLink}>{n.navTitle}</a>
-          </li>
-        ))}
-      </ul>
-      <a href="/">
-        <Logo width={83} height={105} />
-      </a>
-      <ul>
-        {rightNav.map((n) => (
-          <li key={crypto.randomUUID()}>
-            <a href={n.navLink}>{n.navTitle}</a>
-          </li>
-        ))}
-      </ul>
-    </StyledNav>
+    <>
+      {' '}
+      {isMobile ? (
+        <StyledNav>
+          <Logo width={50} height={53} />
+          {isOpen && (
+            <ul>
+              {mergedNav.map((n) => (
+                <a key={crypto.randomUUID()} href={n.navLink}>
+                  <li> {n.navTitle}</li>
+                </a>
+              ))}
+            </ul>
+          )}
+          <BurgerButton onClick={() => setOpen((prev) => !prev)} />
+        </StyledNav>
+      ) : (
+        <StyledNav>
+          <ul>
+            {leftNav.map((n) => (
+              <a href={n.navLink} key={crypto.randomUUID()}>
+                <li>{n.navTitle}</li>
+              </a>
+            ))}
+          </ul>
+          <a href="/">
+            <Logo width={83} height={105} />
+          </a>
+          <ul>
+            {rightNav.map((n) => (
+              <a href={n.navLink} key={crypto.randomUUID()}>
+                <li>{n.navTitle}</li>
+              </a>
+            ))}
+          </ul>
+        </StyledNav>
+      )}
+    </>
   );
 };

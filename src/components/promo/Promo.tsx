@@ -7,9 +7,10 @@ import { Arrow } from '../../assets/icons';
 import { Title } from './Title';
 import { Subtitle } from './Subtitle';
 import { Container } from '../layout';
+import { useMobile } from '../hooks';
 
 const PromoSection = styled.section`
-  background: url(${promoImage}) no-repeat center;
+  background: url(${promoImage}) no-repeat left center;
   background-size: cover;
   min-height: 100vh;
   text-align: center;
@@ -21,22 +22,51 @@ const PromoSection = styled.section`
     margin-bottom: 30px;
     align-self: center;
   }
+  ${theme.breakpoints.mobile} {
+    background-position: 8% center;
+  }
 `;
 
 const { darkGray } = theme.colors.text;
 
-export const Promo: React.FC = () => (
-  <PromoSection>
-    <Container mw={1220}>
-      <Title />
-      <Subtitle />
-      <Line mw={386} mb={10} />
-      <Typography fz={16} color={darkGray}>
-        автодром Портимао, Португалия
-      </Typography>
-    </Container>
-    <a href="/">
-      <Arrow />
-    </a>
-  </PromoSection>
-);
+export const Promo: React.FC = () => {
+  const isMobile = useMobile();
+
+  return (
+    <PromoSection>
+      {isMobile ? (
+        <>
+          <Container mw={1220}>
+            <Title fz={50}>LAMBORGHINI SUPER TROFEO</Title>
+            <Subtitle fz={30}>
+              Гранд-финал 2023 <span>3-6 ноября </span>
+            </Subtitle>
+            <Line mw={200} mb={10} />
+            <Typography fz={14} color={darkGray}>
+              автодром Портимао, Португалия
+            </Typography>
+          </Container>
+          <a href="/">
+            <Arrow />
+          </a>
+        </>
+      ) : (
+        <>
+          <Container mw={1220}>
+            <Title fz={76}>LAMBORGHINI SUPER TROFEO</Title>
+            <Subtitle fz={48}>
+              Гранд-финал 2023 <span>3-6 ноября </span>
+            </Subtitle>
+            <Line mw={386} mb={10} />
+            <Typography fz={16} color={darkGray}>
+              автодром Портимао, Португалия
+            </Typography>
+          </Container>
+          <a href="/">
+            <Arrow />
+          </a>
+        </>
+      )}
+    </PromoSection>
+  );
+};
