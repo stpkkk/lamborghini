@@ -66,16 +66,16 @@ const StyledComponent = styled.div<Props>`
     css`
       font-style: ${fs};
     `};
-	${({ mw }) =>
+  ${({ mw }) =>
     mw &&
     css`
       max-width: ${mw}px;
-	  `};
-	${({ mh }) =>
+    `};
+  ${({ mh }) =>
     mh &&
     css`
       min-height: ${mh}px;
-	  `};
+    `};
   ${({ fb }) =>
     fb &&
     css`
