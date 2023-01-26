@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Facebook, Insta, Youtube } from '../../assets/icons';
+import { theme } from '../../styles';
 import { Address } from './Address';
 
 const StyledFooterTop = styled.div`
@@ -8,10 +9,14 @@ const StyledFooterTop = styled.div`
   justify-content: space-between;
   gap: 0 20px;
   margin: 0 0 80px;
+  ${theme.breakpoints.mobile} {
+    display: block;
+	margin: 0 0 30px;
+  }
 `;
 
 const ContactsWrapper = styled.li`
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   dt {
     color: #ffffff;
     padding: 0 0 20px;
@@ -19,7 +24,7 @@ const ContactsWrapper = styled.li`
     font-size: 16px;
   }
   dd {
-    margin: 0 0 10px;
+    padding: 0 0 10px;
     a {
       color: #ffffff;
     }
@@ -32,6 +37,7 @@ const SocialMediaWrapper = styled.li`
   align-items: center;
   gap: 0 20px;
   max-width: 140px;
+  margin: 0 0 30px;
 `;
 
 export const FooterTop: React.FC = () => (

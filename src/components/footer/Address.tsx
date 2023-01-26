@@ -10,7 +10,7 @@ const AddressWrapper = styled.div`
   -moz-filter: grayscale(1);
   -o-filter: grayscale(1);
   address {
-    padding: 0 0 20px;
+    margin: 0 0 20px;
     color: #ffffff;
     flex-basis: 462px;
   }
@@ -18,7 +18,7 @@ const AddressWrapper = styled.div`
 
 export const Address: React.FC = () => (
   <AddressWrapper>
-    <Typography fz={16} p="0 0 20px" color="#ffffff">
+    <Typography fz={16} m="0 0 20px" color="#ffffff">
       АДРЕС
     </Typography>
     <address>

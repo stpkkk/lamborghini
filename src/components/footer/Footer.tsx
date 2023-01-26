@@ -9,6 +9,9 @@ import { StyledH3 } from '../common';
 const StyledFooter = styled.footer`
   background: ${theme.colors.background.darkGray};
   padding: 100px 0 80px;
+  ${theme.breakpoints.mobile} {
+    padding: 50px 0;
+  }
 `;
 
 export const Footer: React.FC = () => (
