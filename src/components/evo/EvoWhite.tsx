@@ -6,18 +6,22 @@ import { Container } from '../layout';
 import videoCover from '../../assets/images/evo-video-cover.png';
 import ThirdDecImage from '../../assets/images/evo-dec-3.png';
 import FourthDecImage from '../../assets/images/evo-dec-4.png';
+import { theme } from '../../styles';
 
 const EvoWhiteWrapper = styled.div`
-  padding: 125px 0 0;
-  position: relative;
+  margin: 100px 0 0;
+  overflow-x: hidden;
   ::before {
     content: '';
     position: absolute;
     background: url(${ThirdDecImage});
     width: 274px;
     height: 250px;
-    top: -20px;
-    left: 870px;
+    top: 855px;
+    left: 850px;
+    @media (max-width: 1130px) {
+      display: none;
+    }
   }
   ::after {
     content: '';
@@ -25,8 +29,14 @@ const EvoWhiteWrapper = styled.div`
     background: url(${FourthDecImage});
     width: 310px;
     height: 300px;
-    top: 105px;
-    left: 1100px;
+    top: 1000px;
+    left: 1095px;
+    @media (max-width: 1415px) {
+      display: none;
+    }
+  }
+  ${theme.breakpoints.mobile} {
+    margin: 50px 0 0;
   }
 `;
 
@@ -35,6 +45,9 @@ const EvoBlackTextBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  ${theme.breakpoints.mobile} {
+    margin: 0 0 50px;
+  }
 `;
 
 const EvoWhiteVideo = styled.div`

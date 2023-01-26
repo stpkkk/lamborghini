@@ -9,7 +9,13 @@ import { LeftArrow, RightArrow } from '../../assets/icons';
 import { getSliderData } from '../../services';
 
 const BlogSliderWrapper = styled.div`
-  padding: 0 0 100px;
+  margin: 0 10px 100px 10px;
+  ${theme.breakpoints.mobile} {
+    margin: 0;
+    img {
+      width: 100%;
+    }
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -29,15 +35,15 @@ const { darkGray } = theme.colors.text;
 export const BlogSlider: React.FC = () => {
   const swiperRef = useRef<SwiperCore>();
   const sliderSettings = {
-    440: {
+    0: {
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
-    680: {
+    780: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1024: {
+    1920: {
       slidesPerView: 2,
       spaceBetween: 20,
     },

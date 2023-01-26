@@ -7,11 +7,17 @@ import { theme } from '../../styles/theme';
 const { gold } = theme.colors.text;
 
 const BlogQuoteWrapper = styled.div`
-  padding: 0 30px 100px 0;
+  margin: 0 0 100px 0;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  ${theme.breakpoints.mobile} {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 50px 0;
+  }
 `;
+
 const BlogQuoteTextBox = styled.div`
   flex-basis: 434px;
   blockquote {
@@ -25,6 +31,12 @@ const BlogQuoteTextBox = styled.div`
       color: ${gold};
       margin-bottom: 3px;
     }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  ${theme.breakpoints.mobile} {
+    flex-basis: auto;
   }
 `;
 
@@ -35,7 +47,7 @@ export const BlogQuote: React.FC = () => (
         <cite>
           <span>Чемпион Am</span>Анджей Левандовски
         </cite>
-        <Typography m="10px 0" fs="italic">
+        <Typography p="10px 0" fs="italic">
           «Я очень доволен титулом, моей второй победой в Am и четвертой в Super
           Trofeo, мне очень приятно делать это в этом году, потому что уровень
           соревнований очень высок. Должен сказать, сегодня было довольно легко,
@@ -46,7 +58,7 @@ export const BlogQuote: React.FC = () => (
         <cite>
           <span>Обладатель кубка Lamborghini</span>Жерар ван дер Хорст
         </cite>
-        <Typography m="10px 0" fs="italic">
+        <Typography p="10px 0" fs="italic">
           «Я очень доволен титулом, моей второй победой в Am и четвертой в Super
           Trofeo, мне очень приятно делать это в этом году, потому что уровень
           соревнований очень высок. Должен Обладатель кубка Lamborghini добавил:
@@ -54,6 +66,6 @@ export const BlogQuote: React.FC = () => (
         </Typography>
       </blockquote>
     </BlogQuoteTextBox>
-    <img src={BlogQuoteImage} alt="quote" height={272} />
+    <img src={BlogQuoteImage} alt="quote" />
   </BlogQuoteWrapper>
 );

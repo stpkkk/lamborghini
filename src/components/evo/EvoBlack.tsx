@@ -4,8 +4,9 @@ import { StyledH3, Typography } from '../common';
 import { theme } from '../../styles';
 import { Container } from '../layout';
 import EvoCar from '../../assets/images/evo-car.png';
-import FirstDecImage from '../../assets/images/evo-dec-1.png';
-import SecondDecImage from '../../assets/images/evo-dec-2.png';
+import { useMobile } from '../hooks/useMediaQuery';
+import FirstDecImage from '../../assets/icons/evo-dec-1.svg';
+import SecondDecImage from '../../assets/icons/evo-dec-2.svg';
 
 const { darkGray } = theme.colors.background;
 
@@ -13,7 +14,13 @@ const EvoBlackWrapper = styled.div`
   background: ${darkGray};
   padding: 100px 0 50px;
   min-height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  ${theme.breakpoints.mobile} {
+	padding: 50px 0;
+  }
   ::before {
     content: '';
     position: absolute;
@@ -21,7 +28,11 @@ const EvoBlackWrapper = styled.div`
     width: 185px;
     height: 213px;
     top: 320px;
-    left: 380px;
+    left: 370px;
+    ${theme.breakpoints.mobile} {
+      top: 380px;
+      left: 5px;
+    }
   }
   ::after {
     content: '';
@@ -30,7 +41,11 @@ const EvoBlackWrapper = styled.div`
     width: 498px;
     height: 572px;
     top: 400px;
-    left: 470px;
+    left: 460px;
+    ${theme.breakpoints.mobile} {
+      top: 460px;
+      left: 90px;
+    }
   }
   img {
     margin: 0 auto 60px;
@@ -44,6 +59,9 @@ const EvoBlackInfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 0 200px;
+  ${theme.breakpoints.mobile} {
+    display: block;
+  }
 `;
 const EvoBlackTextBox = styled.div`
   display: flex;
@@ -53,13 +71,19 @@ const EvoBlackTextBox = styled.div`
 `;
 const StyledDl = styled.dl`
   display: flex;
-  justify-content: center;
   gap: 0 65px;
   position: relative;
   z-index: 1;
   dd,
   dt {
     color: #ffffff;
+  }
+  ${theme.breakpoints.mobile} {
+    display: block;
+    text-align: center;
+    div {
+      padding: 10px 0;
+    }
   }
 `;
 
@@ -71,14 +95,21 @@ export const EvoBlack: React.FC = () => {
     ['МАКС. СКОРОСТЬ', '325 км /ч'],
     ['0-100 КМ/Ч', '2,9 с'],
   ];
+  const isMobile = useMobile();
 
   return (
     <EvoBlackWrapper>
       <Container mw={920}>
         <EvoBlackInfoWrapper>
-          <StyledH3 color="#FFFFFF" p="0 50px 0">
-            СУПЕР ТРОФЕО ЭВО
-          </StyledH3>
+          {isMobile ? (
+            <StyledH3 color="#FFFFFF" m="0 30px 30px 0">
+              СУПЕР ТРОФЕО ЭВО
+            </StyledH3>
+          ) : (
+            <StyledH3 color="#FFFFFF" m="0 50px 0 0">
+              СУПЕР ТРОФЕО ЭВО
+            </StyledH3>
+          )}
           <EvoBlackTextBox>
             <Typography color="#FFFFFF">
               Новый Huracán Super Trofeo EVO достигает еще больших высот, чем
