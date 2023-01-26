@@ -9,7 +9,10 @@ import { theme } from '../../styles';
 import { useMobile } from '../hooks';
 
 const InfoSection = styled.section`
-  margin-bottom: 100px;
+  margin:0 0 100px;
+  ${theme.breakpoints.mobile} {
+	margin: 0 0 50px;
+  }
 `;
 
 const InfoPart = styled.div`
@@ -28,6 +31,7 @@ const InfoPart = styled.div`
   }
   ${theme.breakpoints.mobile} {
     display: block;
+	padding: 50px 0 0 0;
 	img {
     width: 100%;
   }

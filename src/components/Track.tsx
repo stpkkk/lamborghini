@@ -23,7 +23,7 @@ export const Track: React.FC = () => (
   <TrackSection>
     <Container mw={920}>
       <TrackWrapper>
-        <StyledH3 p="50px 0 30px 0">ТРЕК ПОРТИМАО</StyledH3>
+        <StyledH3 p="50px 0 0 0" m='0 0 30px'>ТРЕК ПОРТИМАО</StyledH3>
         <Typography mw={435} fw={400}>
           Autodromo Internacional do Algarve находится в одноименном регионе на
           юге Португалии, недалеко от города Портиман. Открытый в октябре 2008
