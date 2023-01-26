@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { Logo } from '../../assets/icons';
 import { theme } from '../../styles';
 import { useMobile } from '../hooks';
@@ -84,7 +85,7 @@ export const Navigation: React.FC = () => {
           {isOpen && (
             <ul>
               {mergedNav.map((n) => (
-                <a key={crypto.randomUUID()} href={n.navLink}>
+                <a key={uuidv4()} href={n.navLink}>
                   <li> {n.navTitle}</li>
                 </a>
               ))}
@@ -96,7 +97,7 @@ export const Navigation: React.FC = () => {
         <StyledNav>
           <ul>
             {leftNav.map((n) => (
-              <a href={n.navLink} key={crypto.randomUUID()}>
+              <a href={n.navLink} key={uuidv4()}>
                 <li>{n.navTitle}</li>
               </a>
             ))}
@@ -106,7 +107,7 @@ export const Navigation: React.FC = () => {
           </a>
           <ul>
             {rightNav.map((n) => (
-              <a href={n.navLink} key={crypto.randomUUID()}>
+              <a href={n.navLink} key={uuidv4()}>
                 <li>{n.navTitle}</li>
               </a>
             ))}

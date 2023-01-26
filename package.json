@@ -1,4 +1,5 @@
 {
+  "homepage": "https://stpkkk.github.io/lamborghini-super-trofeo/",
   "name": "lamborghini",
   "version": "0.1.0",
   "private": true,
@@ -17,15 +18,15 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.6",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage":"https://stpkkk.github.io/lamborghini-super-trofeo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-	"predeploy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { StyledH3, Typography } from '../common';
 import { theme } from '../../styles';
 import { Container } from '../layout';
@@ -19,7 +20,7 @@ const EvoBlackWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   ${theme.breakpoints.mobile} {
-	padding: 50px 0;
+    padding: 50px 0;
   }
   ::before {
     content: '';
@@ -131,7 +132,7 @@ export const EvoBlack: React.FC = () => {
         <img src={EvoCar} alt="Huracán Super Trofeo EVO" />
         <StyledDl>
           {descriptionListData.map((d) => (
-            <div key={crypto.randomUUID()}>
+            <div key={uuidv4()}>
               <dd>{d[0]}</dd>
               <dt>{d[1]}</dt>
             </div>

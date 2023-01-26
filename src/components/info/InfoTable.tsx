@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { theme } from '../../styles';
 
 const StyledTable = styled.table`
@@ -38,10 +39,10 @@ export const InfoTable: React.FC = () => {
     <StyledTable>
       <tbody>
         {tableData.map((obj) => (
-          <tr key={crypto.randomUUID()}>
+          <tr key={uuidv4()}>
             {keys.map((cell: any) => {
               const value = obj[cell];
-              return <td key={crypto.randomUUID()}>{value}</td>;
+              return <td key={uuidv4()}>{value}</td>;
             })}
           </tr>
         ))}

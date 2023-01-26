@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import 'swiper/swiper.min.css';
@@ -69,7 +70,7 @@ export const BlogSlider: React.FC = () => {
         }}
       >
         {getSliderData.map((s) => (
-          <SwiperSlide key={crypto.randomUUID()}>
+          <SwiperSlide key={uuidv4()}>
             <img src={s.image} alt="slide" />
             <Typography mh={46} fw={400} fz={20} m="10px 0">
               {s.title}
