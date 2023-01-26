@@ -20,6 +20,9 @@ body {
   color: ${(props) => props.theme.colors.text.black};
   background: ${(props) => props.theme.colors.background.page};
 }
+img {
+  max-width: 100%;
+}
 a {
   text-decoration: none;
 }
