@@ -5,12 +5,12 @@ import { theme } from '../../styles';
 type Props = {
   children: ReactNode;
   fz: number;
+  m?: string;
 };
 
 const StyledComponent = styled.h2<Props>`
   font-weight: 400;
   font-family: 'Impact', sans-serif;
-  margin: 0 0 10px 0;
   span {
     display: block;
     font-size: 34px;
@@ -21,6 +21,11 @@ const StyledComponent = styled.h2<Props>`
     fz &&
     css`
       font-size: ${fz}px;
+    `};
+  ${({ m }) =>
+    m &&
+    css`
+      margin: ${m};
     `};
 `;
 

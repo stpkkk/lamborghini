@@ -37,12 +37,12 @@ export const Promo: React.FC = () => {
       {isMobile ? (
         <>
           <Container mw={1220}>
-            <Title fz={50}>LAMBORGHINI SUPER TROFEO</Title>
-            <Subtitle fz={30}>
+            <Title fz={40}>LAMBORGHINI SUPER TROFEO</Title>
+            <Subtitle fz={25} m="0 0 0">
               Гранд-финал 2023 <span>3-6 ноября </span>
             </Subtitle>
             <Line mw={200} mb={10} />
-            <Typography fz={14} color={darkGray}>
+            <Typography fz={14} color="#000000">
               автодром Портимао, Португалия
             </Typography>
           </Container>
