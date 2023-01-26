@@ -19,11 +19,14 @@
     "swiper": "^8.4.6",
     "web-vitals": "^2.1.4"
   },
+  "homepage":"https://stpkkk.github.io/lamborghini-super-trofeo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +60,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^5.0.0",
     "typescript": "^4.9.4"
   }
 }
