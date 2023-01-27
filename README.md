@@ -58,6 +58,6 @@
 
 <div >
 <p>Prewie:</p>
-<img src="https://github.com/stpkkk/cryptocurrency-react/blob/master/prewie-lamborghini-super-trofeo.png" alt="prewie">
+<img src="https://github.com/stpkkk/lamborghini-super-trofeo/blob/master/prewie-lamborghini-super-trofeo.png" alt="prewie">
 </div>
 <div >
