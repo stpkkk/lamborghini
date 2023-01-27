@@ -23,7 +23,7 @@ const StyledNav = styled.nav`
   ${theme.breakpoints.mobile} {
     ul {
       background: url('https://media0.giphy.com/media/CwM9k8RChLqqQ/giphy.gif?cid=ecf05e47s0uniyf7d35ufnwt4xfxq0oifqsv3bowq8bm8gun&rid=giphy.gif&ct=g')
-        75% bottom;
+        75% center;
       background-size: cover;
       height: 100vh;
       padding: 0;
@@ -48,10 +48,7 @@ const StyledNav = styled.nav`
           text-align: center;
         }
       }
-      a :hover {
-        color: ${theme.colors.text.darkGray};
-        background-color: #ffffff;
-      }
+      a :hover,
       a :active {
         color: ${theme.colors.text.darkGray};
         background-color: #ffffff;
