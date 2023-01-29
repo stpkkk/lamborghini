@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,7 +7,9 @@ import 'swiper/swiper.min.css';
 import { theme } from '../../styles/theme';
 import { Typography } from '../common';
 import { LeftArrow, RightArrow } from '../../assets/icons';
-import { getSliderData } from '../../services';
+import { AppContext } from '../../context';
+import { SliderData } from '../../models';
+import { ImagePaths } from './ImagePaths';
 
 const BlogSliderWrapper = styled.div`
   margin: 0 10px 100px 10px;
@@ -49,6 +51,9 @@ export const BlogSlider: React.FC = () => {
       spaceBetween: 20,
     },
   };
+
+  const { sliderData } = useContext<{ sliderData: SliderData[] }>(AppContext);
+
   return (
     <BlogSliderWrapper>
       <ButtonWrapper>
@@ -69,9 +74,9 @@ export const BlogSlider: React.FC = () => {
           swiperRef.current = swiper;
         }}
       >
-        {getSliderData.map((s) => (
+        {sliderData.map((s) => (
           <SwiperSlide key={uuidv4()}>
-            <img src={s.image} alt="slide" />
+            <img src={ImagePaths[s.image]} alt="slide" />
             <Typography mh={46} fw={400} fz={20} m="10px 0">
               {s.title}
             </Typography>
