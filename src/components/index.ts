@@ -7,3 +7,4 @@ export * from './evo';
 export * from './blog';
 export * from './footer';
 export * from './hooks';
+export {Loader} from './Loader';
