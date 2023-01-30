@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import {AppContext} from '../context/context';
+import { AppContext } from '../context/context';
 import { MainPage } from '../pages';
 import { GlobalStyles, theme } from '../styles';
 import { Loader } from './Loader';
@@ -15,7 +15,9 @@ export const App = () => {
     async function fetchData() {
       try {
         setLoading(true);
-        const res = await fetch('http://localhost:5000/sliderDataBase');
+        const res = await fetch(
+          'https://my-json-server.typicode.com/stpkkk/mockjson/sliderDataBase'
+        );
         const jsonData = await res.json();
         setSliderData(jsonData);
         setLoading(false);
