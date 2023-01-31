@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   position: absolute;
   left: 0;
   right: 0;
-  padding: 25px 42px 0 0;
+  padding: 25px 8px 0 0;
   background: ${theme.colors.gradient.promo};
   filter: ${theme.colors.filter.promoFilter};
   ${theme.breakpoints.mobile} {
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
 `;
 
 export const Header: React.FC = () => (
-  <StyledHeader>
+  <StyledHeader id='top'>
     <Container mw={1220}>
       <Navigation />
     </Container>
