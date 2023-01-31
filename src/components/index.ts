@@ -1,4 +1,3 @@
-export { Track } from './Track';
 export * from './info';
 export * from './header';
 export * from './layout';
@@ -7,4 +6,6 @@ export * from './evo';
 export * from './blog';
 export * from './footer';
 export * from './hooks';
-export {Loader} from './Loader';
+export * from './common';
+export { Track } from './Track';
+export { Loader } from './Loader';
