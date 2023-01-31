@@ -4,7 +4,6 @@ import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { Typography } from '../common';
 
 const AddressWrapper = styled.div`
-max-width: 400px;
   filter: grayscale(1);
   -ms-filter: grayscale(1);
   -webkit-filter: grayscale(1);
@@ -14,6 +13,7 @@ max-width: 400px;
     margin: 0 0 20px;
     color: #ffffff;
     flex-basis: 462px;
+	max-width: 350px;
   }
 `;
 
@@ -31,10 +31,8 @@ export const Address: React.FC = () => (
           center: [37.23142279396843, -8.628370515477373],
           zoom: 14,
         }}
-        modules={['geolocation', 'geocode']}
-        width="100%"
-        height="75%"
-	
+        width="330px"
+        height="220px"
       />
     </YMaps>
   </AddressWrapper>
