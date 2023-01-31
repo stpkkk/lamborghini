@@ -102,15 +102,12 @@ export const EvoBlack: React.FC = () => {
     <EvoBlackWrapper>
       <Container mw={920}>
         <EvoBlackInfoWrapper>
-          {isMobile ? (
-            <StyledH3 color="#FFFFFF" m="0 30px 30px 0">
-              СУПЕР ТРОФЕО ЭВО
-            </StyledH3>
-          ) : (
-            <StyledH3 color="#FFFFFF" m="0 50px 0 0">
-              СУПЕР ТРОФЕО ЭВО
-            </StyledH3>
-          )}
+          <StyledH3
+            color="#FFFFFF"
+            m={isMobile ? '0 30px 30px 0' : '0 50px 0 0'}
+          >
+            СУПЕР ТРОФЕО ЭВО
+          </StyledH3>
           <EvoBlackTextBox>
             <Typography color="#FFFFFF">
               Новый Huracán Super Trofeo EVO достигает еще больших высот, чем

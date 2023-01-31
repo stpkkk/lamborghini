@@ -5,7 +5,7 @@ import { EvoBlack } from './EvoBlack';
 import { EvoWhite } from './EvoWhite';
 
 const EvoSection = styled.section`
-  margin: 0 auto 100px;
+  margin: 0 auto;
   position: relative;
   overflow-x: hidden;
   ${theme.breakpoints.mobile} {
@@ -14,7 +14,7 @@ const EvoSection = styled.section`
 `;
 
 export const Evo: React.FC = () => (
-  <EvoSection>
+  <EvoSection id='evo'>
     <EvoBlack />
     <EvoWhite />
   </EvoSection>

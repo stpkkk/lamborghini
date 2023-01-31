@@ -41,7 +41,6 @@ const EvoWhiteWrapper = styled.div`
 `;
 
 const EvoBlackTextBox = styled.div`
-  margin: 0 0 100px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -58,6 +57,7 @@ const EvoWhiteVideo = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 100px 0 0 0;
   a span {
     display: block;
     color: #fff;
@@ -86,8 +86,8 @@ export const EvoWhite: React.FC = () => (
           воздухозаборник, которые делают его мгновенно узнаваемым для зрителей.
         </Typography>
       </EvoBlackTextBox>
-      <EvoWhiteVideo>
-        <a href="/">
+      <EvoWhiteVideo id="watch-online">
+        <a href="https://www.youtube.com/watch?v=wm3CMcFDodA">
           <EvoVideoIcon />
           <span>смотреть онлайн</span>
         </a>
