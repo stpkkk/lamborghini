@@ -1,5 +1,6 @@
 export const Logo = ({ width, height }: { width: number; height: number }) => (
   <svg
+    cursor="pointer"
     width={width}
     height={height}
     viewBox="0 0 91 104"
