@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import { GlobalStyles, theme } from './styles';
 import { Loader } from './components/Loader';
 import { SliderData } from './models';
 
-export const App = () => {
+export const App: React.FC = () => {
   const notify = () =>
     toast('🏁 Welcome', {
       position: 'top-center',
@@ -18,7 +18,7 @@ export const App = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: 'light',
+      theme: 'dark',
     });
   const [loading, setLoading] = useState<boolean>(false);
   const [sliderData, setSliderData] = useState<SliderData[]>([]);
