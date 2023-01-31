@@ -15,7 +15,7 @@ const StyledFooter = styled.footer`
 `;
 
 export const Footer: React.FC = () => (
-  <StyledFooter>
+  <StyledFooter id='contacts'>
     <Container mw={1220}>
       <Container mw={920}>
         <StyledH3 m="0 0 50px" color="#FFFFFF">

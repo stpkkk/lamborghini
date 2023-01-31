@@ -4,6 +4,7 @@ import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { Typography } from '../common';
 
 const AddressWrapper = styled.div`
+max-width: 400px;
   filter: grayscale(1);
   -ms-filter: grayscale(1);
   -webkit-filter: grayscale(1);

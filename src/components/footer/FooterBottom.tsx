@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { Logo } from '../../assets/icons';
 import { theme } from '../../styles';
@@ -28,7 +29,9 @@ export const FooterBottom: React.FC = () => (
     <a href="https://github.com/stpkkk">
       Developed by <span>Igor Stepanov</span>
     </a>
-    <Logo width={50} height={58} />
+    <Link to="top" spy smooth offset={0} duration={500}>
+      <Logo width={50} height={58} />
+    </Link>
     <a href="/">Политика конфиденциальности </a>
   </StyledFooterBottom>
 );
