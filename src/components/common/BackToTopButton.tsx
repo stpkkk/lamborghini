@@ -7,6 +7,7 @@ const StyledBackToTopButton = styled.div`
   position: fixed;
   right: 50px;
   bottom: 50px;
+  z-index: 2;
   cursor: pointer;
   ${theme.breakpoints.mobile} {
     right: 20px;
