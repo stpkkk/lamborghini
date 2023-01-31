@@ -1,5 +1,14 @@
 import React from 'react';
-import { Promo, Header, Info, Track, Evo, Blog, Footer } from '../components';
+import {
+  Promo,
+  Header,
+  Info,
+  Track,
+  Evo,
+  Blog,
+  Footer,
+  BackToTopButton,
+} from '../components';
 
 export const MainPage: React.FC = () => (
   <>
@@ -12,5 +21,6 @@ export const MainPage: React.FC = () => (
       <Blog />
     </main>
     <Footer />
+    <BackToTopButton />
   </>
 );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-scroll';
 import { Logo } from '../../assets/icons';
 import { theme } from '../../styles';
 import { useMobile } from '../hooks';
@@ -13,11 +14,15 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 20px;
+    gap: 0 50px;
     padding: 0 10px;
-    a li {
+    li {
       font-size: 16px;
+      cursor: pointer;
       color: ${theme.colors.text.darkGray};
+	  :hover {
+		text-decoration: underline;
+	  }
     }
   }
   ${theme.breakpoints.mobile} {
@@ -38,15 +43,12 @@ const StyledNav = styled.nav`
       padding: 120px 0 0 0;
       z-index: -1;
 
-      a {
-        width: 100%;
-        li {
-          color: #ffffff;
-          padding: 10px;
-          font-size: 3vh;
-          text-transform: uppercase;
-          text-align: center;
-        }
+      li {
+        color: #ffffff;
+        padding: 10px;
+        font-size: 3vh;
+        text-transform: uppercase;
+        text-align: center;
       }
       a :hover,
       a :active {
@@ -61,15 +63,14 @@ export const Navigation: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
   const isMobile = useMobile();
   const leftNav = [
-    { navLink: '/', navTitle: 'О гонке' },
-    { navLink: '/', navTitle: 'Трек' },
-    { navLink: '/', navTitle: 'Lamborghini Super trofeo' },
-    { navLink: '/', navTitle: 'Новости' },
+    { navLink: 'info', navTitle: 'О гонке' },
+    { navLink: 'track', navTitle: 'Трек' },
+    { navLink: 'evo', navTitle: 'Lamborghini Super trofeo' },
   ];
   const rightNav = [
-    { navLink: '/', navTitle: 'Купить билеты' },
-    { navLink: '/', navTitle: 'Смотреть онлайн' },
-    { navLink: '/', navTitle: 'Контакты' },
+    { navLink: 'blog', navTitle: 'Новости' },
+    { navLink: 'watch-online', navTitle: 'Смотреть онлайн' },
+    { navLink: 'contacts', navTitle: 'Контакты' },
   ];
   const mergedNav = [...leftNav, ...rightNav];
 
@@ -78,13 +79,22 @@ export const Navigation: React.FC = () => {
       {' '}
       {isMobile ? (
         <StyledNav>
-          <Logo width={50} height={53} />
+          <Link key={uuidv4()} to="/" spy smooth offset={50} duration={500}>
+            <Logo width={50} height={53} />
+          </Link>
           {isOpen && (
             <ul>
               {mergedNav.map((n) => (
-                <a key={uuidv4()} href={n.navLink}>
+                <Link
+                  key={uuidv4()}
+                  to={n.navLink}
+                  spy
+                  smooth
+                  offset={50}
+                  duration={500}
+                >
                   <li> {n.navTitle}</li>
-                </a>
+                </Link>
               ))}
             </ul>
           )}
@@ -94,19 +104,33 @@ export const Navigation: React.FC = () => {
         <StyledNav>
           <ul>
             {leftNav.map((n) => (
-              <a href={n.navLink} key={uuidv4()}>
+              <Link
+                key={uuidv4()}
+                to={n.navLink}
+                spy
+                smooth
+                offset={0}
+                duration={500}
+              >
                 <li>{n.navTitle}</li>
-              </a>
+              </Link>
             ))}
           </ul>
-          <a href="/">
+          <Link key={uuidv4()} to="/" spy smooth offset={50} duration={500}>
             <Logo width={83} height={105} />
-          </a>
+          </Link>
           <ul>
             {rightNav.map((n) => (
-              <a href={n.navLink} key={uuidv4()}>
+              <Link
+                key={uuidv4()}
+                to={n.navLink}
+                spy
+                smooth
+                offset={0}
+                duration={500}
+              >
                 <li>{n.navTitle}</li>
-              </a>
+              </Link>
             ))}
           </ul>
         </StyledNav>
